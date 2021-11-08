@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/TextSize"
+            android:text="@string/textview"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/editText"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_edit_text"
+            android:textSize="@dimen/TextSize"
+            android:layout_margin="@dimen/margin"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/bottom"
+            />
+
+        <Button
+            android:id="@+id/bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:text="@string/button"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/editText"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/switchElm"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchElm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:text="@string/switchElm"
+            android:checked="false"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/bottom"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/checkbox" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:text="@string/checkbox"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/switchElm"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/toggleButton"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:checked="false"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/checkbox"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputText"
+            />
+
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/input_text"
+            android:fontFamily="cursive"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/toggleButton"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputDate"/>
+
+        <EditText
+            android:id="@+id/inputDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/date"
+            android:fontFamily="serif"
+            android:inputType="date"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputText"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputTextPersonName"/>
+
+        <EditText
+            android:id="@+id/inputTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/textPersonName"
+            android:fontFamily="cursive"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputDate"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputPhone"/>
+
+        <EditText
+            android:id="@+id/inputPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/phone"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputTextPersonName"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputNumber"/>
+
+        <EditText
+            android:id="@+id/inputNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/number"
+            android:fontFamily="sans-serif-black"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputPhone"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputTextPassword"/>
+
+        <EditText
+            android:id="@+id/inputTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/textpassword"
+            android:fontFamily="sans-serif"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputNumber"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputTextEmailAddress"/>
+
+        <EditText
+            android:id="@+id/inputTextEmailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/textEmailAddress"
+            android:fontFamily="casual"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputTextPassword"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/inputDatetime"/>
+
+        <EditText
+            android:id="@+id/inputDatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textSize="@dimen/TextSize"
+            android:hint="@string/datetime"
+            android:fontFamily="monospace"
+            android:inputType="datetime"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputTextEmailAddress"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toTopOf="@id/calendarView"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/inputDatetime"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

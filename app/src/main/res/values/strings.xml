@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">lesson1</string>
+    <string name="textview">TextView</string>
+    <string name="hint_edit_text">EditText</string>
+    <string name="button">BUTTON</string>
+    <string name="switchElm">switch</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="off">off</string>
+    <string name="on">on</string>
+    <string name="input_text">inputText</string>
+    <string name="date">Date</string>
+    <string name="textPersonName">textPersonName</string>
+    <string name="phone">phone</string>
+    <string name="number">number</string>
+    <string name="textpassword">textPassword</string>
+    <string name="textEmailAddress">textEmailAddress</string>
+    <string name="datetime">datetime</string>
+</resources>
